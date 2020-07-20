@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/iGoogle-ink/gopay"
+	"github.com/suboat/gopay"
 	"github.com/iGoogle-ink/gotil"
 	"github.com/iGoogle-ink/gotil/xhttp"
 )

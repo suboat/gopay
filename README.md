@@ -1,29 +1,29 @@
 
-<div align=center><img width="220" height="220" alt="Logo was Loading Faild!" src="https://raw.githubusercontent.com/iGoogle-ink/gopay/master/logo.png"/></div>
+<div align=center><img width="220" height="220" alt="Logo was Loading Faild!" src="https://raw.githubusercontent.com/suboat/gopay/master/logo.png"/></div>
 
 # GoPay
 
 QQ、微信、支付宝的Golang版本SDK
 
 [![Golang](https://img.shields.io/badge/golang-1.13+-brightgreen.svg)](https://golang.google.cn)
-[![GoDoc](https://img.shields.io/badge/doc-go.dev-informational.svg)](https://pkg.go.dev/github.com/iGoogle-ink/gopay)
-[![Drone CI](https://cloud.drone.io/api/badges/iGoogle-ink/gopay/status.svg)](https://cloud.drone.io/iGoogle-ink/gopay)
-[![GitHub Release](https://img.shields.io/github/v/release/iGoogle-ink/gopay)](https://github.com/iGoogle-ink/gopay/releases)
-[![License](https://img.shields.io/github/license/iGoogle-ink/gopay)](https://www.apache.org/licenses/LICENSE-2.0)
+[![GoDoc](https://img.shields.io/badge/doc-go.dev-informational.svg)](https://pkg.go.dev/github.com/suboat/gopay)
+[![Drone CI](https://cloud.drone.io/api/badges/suboat/gopay/status.svg)](https://cloud.drone.io/suboat/gopay)
+[![GitHub Release](https://img.shields.io/github/v/release/suboat/gopay)](https://github.com/suboat/gopay/releases)
+[![License](https://img.shields.io/github/license/suboat/gopay)](https://www.apache.org/licenses/LICENSE-2.0)
 
 # 一、安装
 
 ```bash
-$ go get github.com/iGoogle-ink/gopay
+$ go get github.com/suboat/gopay
 ```
 
 * #### 查看 GoPay 版本
-    * [版本更新记录](https://github.com/iGoogle-ink/gopay/blob/master/release_note.txt)
+    * [版本更新记录](https://github.com/suboat/gopay/blob/master/release_note.txt)
 ```go
 import (
     "fmt"
 
-    "github.com/iGoogle-ink/gopay"
+    "github.com/suboat/gopay"
 )
 
 func main() {
@@ -167,15 +167,15 @@ func main() {
 
 # 二、文档说明
 
-* [GoDoc](https://godoc.org/github.com/iGoogle-ink/gopay)
+* [GoDoc](https://godoc.org/github.com/suboat/gopay)
 * QQ支付 使用方法请参考微信的
 * 所有方法，如有问题，请仔细查看 wechat_client_test.go、alipay_client_test.go 或 examples
 * 有问题请加QQ群（加群验证答案：gopay），微信加好友拉群（微信群比较活跃）。在此，非常感谢那些加群后，提出意见和反馈问题的同志们！
 
 QQ群：
-<img width="226" height="300" src="https://raw.githubusercontent.com/iGoogle-ink/gopay/master/qq_gopay.png"/>
+<img width="226" height="300" src="https://raw.githubusercontent.com/suboat/gopay/master/qq_gopay.png"/>
 加微信拉群：
-<img width="226" height="300" src="https://raw.githubusercontent.com/iGoogle-ink/gopay/master/wechat_jerry.png"/>
+<img width="226" height="300" src="https://raw.githubusercontent.com/suboat/gopay/master/wechat_jerry.png"/>
 
 ---
 
@@ -186,7 +186,7 @@ QQ群：
 微信官方文档：[官方文档](https://pay.weixin.qq.com/wiki/doc/api/index.html)
 ```go
 import (
-	"github.com/iGoogle-ink/gopay/wechat"
+	"github.com/suboat/gopay/wechat"
 )
 
 // 初始化微信客户端
@@ -222,7 +222,7 @@ client.AddCertFilePath()
 
 ```go
 import (
-	"github.com/iGoogle-ink/gopay/alipay"
+	"github.com/suboat/gopay/alipay"
 )
 
 // 初始化支付宝客户端
@@ -255,7 +255,7 @@ err := client.SetCertSnByPath("appCertPublicKey.crt", "alipayRootCert.crt", "ali
 具体参数请根据不同接口查看：[微信支付接口文档](https://pay.weixin.qq.com/wiki/doc/api/index.html)
 ```go
 import (
-	"github.com/iGoogle-ink/gopay/wechat"
+	"github.com/suboat/gopay/wechat"
 )
 
 // 初始化 BodyMap
@@ -367,7 +367,7 @@ APP支付官方文档：[APP端调起支付的参数列表文档](https://pay.we
 微信内H5支付官方文档：[微信内H5支付文档](https://pay.weixin.qq.com/wiki/doc/api/external/jsapi.php?chapter=7_7&index=6)
 ```go
 import (
-	"github.com/iGoogle-ink/gopay/wechat"
+	"github.com/suboat/gopay/wechat"
 )
 
 // ====微信小程序 paySign====
@@ -419,8 +419,8 @@ paySign := wechat.GetH5PaySign(AppID, wxRsp.NonceStr, packages, wechat.SignType_
 * #### 微信
 ```go
 import (
-	"github.com/iGoogle-ink/gopay"
-	"github.com/iGoogle-ink/gopay/wechat"
+	"github.com/suboat/gopay"
+	"github.com/suboat/gopay/wechat"
 )
 
 // ====同步返回参数验签Sign====
@@ -467,7 +467,7 @@ return c.String(http.StatusOK, rsp.ToXmlString())   // 此写法是 echo 框架�
 支付宝支付后的同步/异步通知验签文档：[支付结果通知](https://opendocs.alipay.com/open/200/106120)
 ```go
 import (
-	"github.com/iGoogle-ink/gopay/alipay"
+	"github.com/suboat/gopay/alipay"
 )
 
 // ====同步返回参数验签Sign====
@@ -507,7 +507,7 @@ button按钮获取手机号码：[button组件文档](https://developers.weixin.
 微信解密算法文档：[解密算法文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/signature.html)
 ```go
 import (
-	"github.com/iGoogle-ink/gopay/wechat"
+	"github.com/suboat/gopay/wechat"
 )
 
 // 获取微信小程序用户的OpenId、SessionKey、UnionId
@@ -565,7 +565,7 @@ fmt.Println("WeChatUserPhone:", bm)
 支付宝加解密文档：[AES配置文档](https://opendocs.alipay.com/mini/introduce/aes) ，[AES加解密文档](https://opendocs.alipay.com/open/common/104567)
 ```go
 import (
-	"github.com/iGoogle-ink/gopay/alipay"
+	"github.com/suboat/gopay/alipay"
 )
 
 // 换取授权访问令牌（默认使用utf-8，RSA2）
@@ -588,9 +588,9 @@ fmt.Println(*phone)
 
 ## 开源不易，讲究的朋友可以给个赞赏
 <font color='#0088ff'>微信：</font>
-<img width="200" height="200" src="https://raw.githubusercontent.com/iGoogle-ink/gopay/master/zanshang_wx.png"/>
+<img width="200" height="200" src="https://raw.githubusercontent.com/suboat/gopay/master/zanshang_wx.png"/>
 <font color='#0088ff'>支付宝：</font>
-<img width="200" height="200" src="https://raw.githubusercontent.com/iGoogle-ink/gopay/master/zanshang_zfb.png"/>
+<img width="200" height="200" src="https://raw.githubusercontent.com/suboat/gopay/master/zanshang_zfb.png"/>
 
 ## License
 ```

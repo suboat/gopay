@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/iGoogle-ink/gopay"
-	"github.com/iGoogle-ink/gopay/wechat"
+	"github.com/suboat/gopay"
+	"github.com/suboat/gopay/wechat"
 	"github.com/iGoogle-ink/gotil"
 )
 

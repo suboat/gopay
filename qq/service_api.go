@@ -11,7 +11,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/iGoogle-ink/gopay"
+	"github.com/suboat/gopay"
 	"github.com/iGoogle-ink/gotil"
 )
 
